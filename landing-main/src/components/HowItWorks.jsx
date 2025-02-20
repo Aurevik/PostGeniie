@@ -9,8 +9,8 @@ import ReactGA from "react-ga4";
 const trackButtonClick = () => {
   ReactGA.event({
     category: "User",
-    action: "Clicked Button",
-    label: "Home Page CTA",
+    action: "Feedback Form",
+    label: "User Feedback",
   });
 };
 
