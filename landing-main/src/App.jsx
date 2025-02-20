@@ -8,7 +8,19 @@ import Footer from './components/Footer';
 
 import * as Sentry from '@sentry/react';
 
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
+
+const TRACKING_ID = "G-16M54PHJGK"; 
+
+
 const App = () => {
+  
+  useEffect(() => {
+    ReactGA.initialize(TRACKING_ID);
+    ReactGA.send("pageview");
+  }, []);
+
   return (
     <main className="bg-black">
       <Navbar />
