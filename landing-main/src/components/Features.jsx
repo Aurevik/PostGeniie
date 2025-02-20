@@ -3,6 +3,31 @@ import React, { useRef } from "react";
 import { animateWithGsap } from "../utils/animations";
 import { explore1Img, explore2Img, exploreVideo } from "../utils";
 import gsap from "gsap";
+import ReactGA from "react-ga4";
+
+const trackILikeThisSoonClick = () => {
+  ReactGA.event({
+    category: "User",
+    action: "Clicked I Like This Button",
+    label: "Home Page I Like This",
+  });
+};
+
+const trackILikeThisSoonClick2 = () => {
+  ReactGA.event({
+    category: "User",
+    action: "Clicked I Like This Button 2",
+    label: "Home Page I Like This 2",
+  });
+};
+
+const trackILikeThisSoonClick3 = () => {
+  ReactGA.event({
+    category: "User",
+    action: "Clicked I Like This Button 3",
+    label: "Home Page I Like This 3",
+  });
+};
 
 const Features = () => {
   const videoRef = useRef();
@@ -84,9 +109,10 @@ const Features = () => {
                   </p>
                   <a
                     aria-describedby="product1"
-                    class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    className="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    onClick={trackILikeThisSoonClick}
                   >
-                    Coming Soon
+                    I Like This
                   </a>
                   <ul
                     role="list"
@@ -165,9 +191,10 @@ const Features = () => {
                   </p>
                   <a
                     aria-describedby="product2"
-                    class="bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    className="bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    onClick={trackILikeThisSoonClick2}
                   >
-                    Coming Soon
+                    I Like This
                   </a>
                   <ul
                     role="list"
@@ -243,9 +270,10 @@ const Features = () => {
                   </p>
                   <a
                     aria-describedby="product3"
-                    class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    className="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
+                    onClick={trackILikeThisSoonClick3}
                   >
-                    Coming Soon
+                    I Like This
                   </a>
                   <ul
                     role="list"
