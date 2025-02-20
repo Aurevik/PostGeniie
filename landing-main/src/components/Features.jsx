@@ -83,7 +83,6 @@ const Features = () => {
                     <span class="text-sm font-semibold leading-6 text-gray-300"></span>
                   </p>
                   <a
-                    href="/order"
                     aria-describedby="product1"
                     class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
@@ -165,7 +164,6 @@ const Features = () => {
                     <span class="text-sm font-semibold leading-6 text-gray-300"></span>
                   </p>
                   <a
-                    href=""
                     aria-describedby="product2"
                     class="bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
@@ -244,7 +242,6 @@ const Features = () => {
                     <span class="text-sm font-semibold leading-6 text-white"></span>
                   </p>
                   <a
-                    href=""
                     aria-describedby="product3"
                     class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2"
                   >
