@@ -4,6 +4,16 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { animateWithGsap } from "../utils/animations";
 
+import ReactGA from "react-ga4";
+
+const trackButtonClick = () => {
+  ReactGA.event({
+    category: "User",
+    action: "Clicked Button",
+    label: "Home Page CTA",
+  });
+};
+
 const HowItWorks = () => {
   const videoRef = useRef();
 
@@ -49,14 +59,18 @@ const HowItWorks = () => {
         <div className="w-full flex justify-center mt-10">
           <div className="relative inline-flex group">
             <div className="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"></div>
-            <a
-              href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__UTeIFlUOU1BT1QxVFJQUE81RzhDMjhDRU9QMzhYVy4u"
-              title="Get quote now"
+            <button
               className="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-              role="button"
+              onClick={() => {
+                trackButtonClick();
+                window.open(
+                  "https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAO__UTeIFlUOU1BT1QxVFJQUE81RzhDMjhDRU9QMzhYVy4u",
+                  "_blank"
+                );
+              }}
             >
               Feedback Form
-            </a>
+            </button>
           </div>
         </div>
       </div>

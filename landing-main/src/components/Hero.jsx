@@ -2,6 +2,15 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { heroVideo, smallHeroVideo } from "../utils";
 import { useEffect, useState } from "react";
+import ReactGA from "react-ga4";
+
+const trackButtonClick = () => {
+  ReactGA.event({
+    category: "User",
+    action: "Clicked Button",
+    label: "Home Page CTA",
+  });
+};
 
 const Hero = () => {
   const [videoSrc, setVideoSrc] = useState(
@@ -49,9 +58,15 @@ const Hero = () => {
         id="cta"
         className="flex flex-col items-center opacity-0 translate-y-20"
       >
-        <a href="#highlights" className="btn">
+        <button
+          className="btn"
+          onClick={() => {
+            trackButtonClick();
+            document.getElementById("highlights")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
           Scroll For More
-        </a>
+        </button>
         <p className="font-normal text-xl">The Future of Social Media Management</p>
       </div>
     </section>
