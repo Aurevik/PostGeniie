@@ -15,9 +15,9 @@ export const hightlightsSlides = [
   {
     id: 1,
     textLists: [
-      "Unleash Your AI.",
-      "Empower Your Words.",
-      "Write Like Never Before!",
+      "Train it once.",
+      "Let it post like you forever.",
+      "The AI that thinks, writes, and refines.",
     ],
     video: highlightFirstVideo,
     videoDuration: 4,
